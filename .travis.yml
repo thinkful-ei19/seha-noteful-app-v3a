@@ -1,10 +1,10 @@
 language: node_js
 node_js: node
 services: mongodb
-# deploy:
-#     provider: heroku
-#     api_key:
-#       secure: [YOUR-API-KEY]
-#     app: [YOUR-APP-NAME]
-#     on:
-#       repo: [YOUR-APP-REPO]
+deploy:
+  provider: heroku
+  api_key:
+    secure: hpdSp9JvI6sJo/G8HJaVOOEnQThYWHMWuZwItc51q9knM6jmvCU2jMW/wXtxcKzL3mnt61DBTNVH61t1voFgFo795gNWoqMB8gmawQ4X+c5a38+MymNaPExrJT+zKSqKlHj9IHjYwxzMrnEO/Ivz7Do+F233P13PGjvWCoO4H1xS8DCbgNwVT+mlhGMzxBVJVU/Dg3txDSTL0/KtH6i99sBcReu6ULVkYljQkwLRLrlAkjH7Xu2NarcUDNgjxBJnshO+2chPvAQRuUQKdQd8oFsv1Pw0Liv7JiEvnBt0sYtuXH4SVDZnzsD3KyatY16RNF0sdRWNjWxMarOh3asIfBORIbPGJ+XHT5J1QQKJiQyho/dO/0ETn2kjfADZuql8cZ+nBhF6E/fOZkGNllh/9fA94jrBKe7+eAiirrNY1AAaCPEnHmhJ4MhxAKbCv0iH/KFUNQZNNOlBdrdBYOmLZYZxens1J4AA8L2Aq2tRpv8PQmQps4kb17o17NP81jk1mH14jwFwF2uOwpVA0RFo+Ehhyf10aup2QlvPrKrmUOD1Yy95BqL86PsLuNdBgPbj2B3qKTkFR0qXReFPcVsXdiKK3UD36jStBKJMMoCYkudRkg/F+RDMCGQIJu6SBTgmaBjcdv9MjEJkh0bLE33L8leRjjYs9jxiU0kOJtU5inI=
+  app: seha-noteful-app-v3a
+  on:
+    repo: thinkful-ei19/seha-noteful-app-v3a
