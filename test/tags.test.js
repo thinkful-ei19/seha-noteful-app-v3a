@@ -148,6 +148,23 @@ describe('Noteful API - Tags', function () {
           expect(res.body.message).to.equal('Missing `name` in request body');
         });
     });
+    it('should return an error when given a duplicate name', function () {
+      const newItem = {
+        'name': 'baz'
+      };
+
+      return chai.request(app)
+        .post('/api/tags')
+        .send(newItem)
+        .catch(err => err.response)
+        .then(res => {
+
+          expect(res).to.have.status(400);
+          expect(res).to.be.json;
+          expect(res.body).to.be.a('object');
+          expect(res.body.message).to.equal('The folder name already exists');
+        });
+    });
 
   });
   describe('PUT /api/tags/:id', function () {
