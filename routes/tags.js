@@ -122,7 +122,7 @@ router.delete('/tags/:id', (req, res, next) => {
     err.status = 400;
     return next(err);
   }
-  
+
   Tag.findByIdAndRemove(id)
     .then(() => {
       res.status(204).end();
@@ -131,5 +131,17 @@ router.delete('/tags/:id', (req, res, next) => {
       next(err);
     });
 });
-
+// const removeTag = Tag.findByIdAndRemove({ _id: id });
+// const removeNotes = Note.updateMany(
+//     { tagId: id },
+//     { '$pull': { 'tagId': '' } });
+// Promise.all([removeTag, removeNotes])
+//     .then(() => {
+//         res.status(204).end();
+//     })
+//     .catch(err => {
+//         next(err);
+//     });
+// });
 module.exports = router;
+
